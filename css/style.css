@@ -1,3 +1,6 @@
+html,body,*{
+    scroll-behavior: smooth;
+}
 body{
     font-family: "Karla", sans-serif;
     margin: 0;
@@ -67,9 +70,61 @@ label:hover > i{
 
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
 header > ul > input{
     display: none;
 }
 header > ul > input:checked + ul{
     display: block;
+}
+#main{
+    color: white;
+    background: rgba(0,0,0,0.3);
+    width: 50vw;
+    min-width: 600px;
+    max-width: 100%;
+    overflow: hidden;
+    height: calc(100vh - 15em);
+    position: fixed;
+    margin: 0 auto;
+    margin-top: 10em;
+    left: 0;
+    right: 0;
+    animation: BGcolorGlitch infinite 1s step-end;
+}
+
+@keyframes BGcolorGlitch {
+    12%,28%,72%{background: rgba(20,0,0,0.4); transform: skew(-0.5deg)}
+    18%,43%,82%{background: rgba(0,20,0,0.4); transform: rotate(0.5deg)}
+    21%,48%,92%{background: rgba(0,0,20,0.4); transform: scale(0.99)}
+
+}
+}
+
+
+#main > section > h1{
+    margin-top: 0;
+}
+#main >section{
+    padding: 12px 15px;
+    min-height: max-content;
+    height: 100%;
+    margin:0 auto;
+    background: rgba(0,0,0,0.5);
+    min-width: 500px;
+    width: 80%;
+}
+
+.mutipleSection{
+    width: 1000vw;
+}
+.mutipleSection > section {
+    display: inline-block;
+    width: 50vw;
+    min-width: 600px;
+    height: 100vh;
 }

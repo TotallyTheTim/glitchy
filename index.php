@@ -17,9 +17,37 @@
 </body>
 <?php include "includes/scripts.php" ?>
 
-<div style="position: fixed; z-index: -99; width: 100%; height: 100%;opacity: 0.2">
+<div id="main">
+    <section id="section1">
+        <?php include "includes/example.php" ?>
+    </section>
+    <section id="section2">
+        <?php include "includes/example.php" ?>
+    </section>
+    <section id="section3">
+        <?php include "includes/example.php" ?>
+    </section>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div style="position: fixed;top:0;left:0; z-index: -99; width: 100%; height: 100%;opacity: 0.2">
     <video autoplay muted loop id="myVideo" style="min-width: 100%;min-height: 100%">
         <source src="content/glitch.mp4" type="video/mp4">
     </video>
 </div>
+
 </html>
