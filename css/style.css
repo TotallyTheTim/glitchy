@@ -1,0 +1,75 @@
+body{
+    font-family: "Karla", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0c0b0a;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    min-width: 300px;
+    width: max-content;
+    background: black;
+    min-height: 1em;
+}
+header > ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+header > ul > li, header > ul > label{
+    cursor: pointer;
+    font-size: 24px;
+    padding: 2px 5px;
+    margin: 15px 20px;
+    display: inline-block;
+    color: white;
+    text-shadow: rgba(255, 0, 0, 0.40) -2px -2px 0, rgba(0, 255, 0, 0.40) 2px -2px 0 , rgba(0, 0, 255, 0.40) 2px 2px 0;
+    animation: glitchEffect infinite 3s step-end;
+}
+header > ul > ul {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: fixed;
+    width: max-content;
+    display: none;
+    /*margin: 0;*/
+    padding: 0;
+    list-style-type: none;
+}
+header > ul > ul > li{
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px 0;
+    background: black;
+    padding: 10px;
+    color: white;
+    text-shadow: rgba(255, 0, 0, 0.40) -2px -2px 0, rgba(0, 255, 0, 0.40) 2px -2px 0 , rgba(0, 0, 255, 0.40) 2px 2px 0;
+    animation: glitchEffect infinite 3s step-end;
+}
+label:hover > i{
+    animation: upAndDown ease-in-out 1.2s infinite;
+}
+@keyframes upAndDown {
+    0%,100%{transform: none}
+    50%{transform: translate(0,3px)}
+
+}
+
+@keyframes glitchEffect {
+    12%,28%,72%{text-shadow: rgba(255, 0, 0, 0.40) -2px -2px 0, rgba(0, 255, 0, 0.40) 2px -2px 0 , rgba(0, 0, 255, 0.40) 2px 2px 0;}
+    18%,43%,82%{text-shadow: rgba(255, 0, 0, 0.40) -1px -2px 0, rgba(0, 255, 0, 0.40) 2px -1px 0 , rgba(0, 0, 255, 0.40) 1px 2px 0;}
+    21%,48%,92%{text-shadow: rgba(255, 0, 0, 0.40) -2px -1px 0, rgba(0, 255, 0, 0.40) 1px -2px 0 , rgba(0, 0, 255, 0.40) 2px 1px 0;}
+
+}
+
+header > ul > input{
+    display: none;
+}
+header > ul > input:checked + ul{
+    display: block;
+}
